@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QLineEdi
 
 
 class MainWindow(QWidget):
+
     def __init__(self):
         super(self.__class__, self).__init__()
         self.setupUi()
@@ -10,9 +11,6 @@ class MainWindow(QWidget):
 
     def setupUi(self):
         self.setWindowTitle("信號的使用!")
-
-        self.label = QLabel()
-        self.label.setText("信號的使用")
 
         self.button_hello = QPushButton()
         self.button_hello.setText("hello")
@@ -27,7 +25,6 @@ class MainWindow(QWidget):
         form_layout.addRow(self.button_cancel)
 
         h_layout = QVBoxLayout()
-        h_layout.addWidget(self.label)
         h_layout.addLayout(form_layout)
 
         self.setLayout(h_layout)
